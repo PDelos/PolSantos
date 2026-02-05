@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: PDelos/PolSantos
+  local_backend: true 
+
+media_folder: "src/lib/images"
+public_folder: "/src/lib/images"
+
+format: "json"
+extension: "json"
+
+i18n:
+  structure: multiple_files
+  locales: [en, es, ca]
+  default_locale: en
