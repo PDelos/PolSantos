@@ -28,20 +28,26 @@ collections:
       - name: "home"
         label: "Home" 
         file: "content/pages/home.json"
+        i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Single Image", name: "image", widget: "image" }
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "text", i18n: true }
+          - { label: "Single Image", name: "image", widget: "image", i18n: false }
 
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
     create: true
+    i18n: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Cover Image", name: "cover", widget: "image" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Cover Image", name: "cover", widget: "image", i18n: false }
       - label: "Project Images"
         name: "images"
         widget: "list"
+        i18n: true
         fields:
-           - { label: "Image", name: "image", widget: "image" }
+           - { label: "Image", name: "image", widget: "image", i18n: false }
+           - { label: "Caption", name: "caption", widget: "string", i18n: true }
