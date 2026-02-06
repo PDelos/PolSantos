@@ -37,7 +37,7 @@ collections:
     label: "Contact"
     folder: "content/contact"
     create: true 
-    i18n: true
+    i18n: false
     extension: "json"
     format: "json"
     slug: "{{slug}}"
@@ -48,7 +48,7 @@ collections:
         widget: "list"
         i18n: false
         fields:
-           - { label: "Icon", name: "icon", widget: "string" }
+           - { label: "Icon", name: "icon", widget: "html" }
            - { label: "URL", name: "url", widget: "string",}
            - { label: "Display Name", name: "display_name", widget: "string" }
 
@@ -68,11 +68,11 @@ collections:
       - label: "Skills"
         name: "skills"
         widget: "list"
-        i18n: true
+        i18n: false
         fields:
-           - { label: "Icon", name: "icon", widget: "string", i18n: false }
-           - { label: "Name", name: "Name", widget: "string", i18n: true }
-           - { label: "Skill Proficiency", name: "proficiency", widget: "number", min: 0, max: 100, i18n: false }
+           - { label: "Icon", name: "icon", widget: "html" }
+           - { label: "Name", name: "Name", widget: "string" }
+           - { label: "Skill Proficiency", name: "proficiency", widget: "number", min: 0, max: 100 }
       
       # EDUCATION
       - label: "Education"
@@ -80,7 +80,7 @@ collections:
         widget: "list"
         i18n: true
         fields:
-          - { label: "Icon", name: "icon", widget: "string", i18n: false }
+          - { label: "Icon", name: "icon", widget: "html" }
           - { label: "Organization", name: "organization", widget: "string", i18n: true }
           - { label: "Degree", name: "degree", widget: "string", i18n: true }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
@@ -94,7 +94,7 @@ collections:
         widget: "list"
         i18n: true
         fields:
-          - { label: "Icon", name: "icon", widget: "string", i18n: false }
+          - { label: "Icon", name: "icon", widget: "html" }
           - { label: "Company", name: "company", widget: "string", i18n: true }
           - { label: "Position", name: "position", widget: "string", i18n: true }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
@@ -123,7 +123,7 @@ collections:
         widget: "list"
         i18n: false
         fields:
-           - { label: "Icon", name: "icon", widget: "string" }
+           - { label: "Icon", name: "icon", widget: "html" }
            - { label: "Name", name: "name", widget: "string" }
 
       # Images
