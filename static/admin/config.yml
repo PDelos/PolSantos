@@ -3,13 +3,45 @@ backend:
   repo: PDelos/PolSantos
   local_backend: true 
 
-media_folder: "src/lib/images"
-public_folder: "/src/lib/images"
+media_folder: "static/uploads/raw"
+public_folder: "/uploads/raw"
 
 format: "json"
 extension: "json"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+display_url: https://localhost:5173
 
 i18n:
   structure: multiple_files
   locales: [en, es, ca]
   default_locale: en
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home" 
+        file: "content/pages/home.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Single Image", name: "image", widget: "image" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Cover Image", name: "cover", widget: "image" }
+      - label: "Project Images"
+        name: "images"
+        widget: "list"
+        fields:
+           - { label: "Image", name: "image", widget: "image" }
