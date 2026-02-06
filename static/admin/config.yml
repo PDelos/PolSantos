@@ -25,7 +25,7 @@ collections:
     identifier_field: title
     summary: "{{title}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Title", name: "title", widget: "string", i18n: false }
       - { label: "Full Name", name: "full_name", widget: "string", i18n: false }
       - { label: "Photo", name: "photo", widget: "image", i18n: false }
       - { label: "Role", name: "role", widget: "string", i18n: true }
@@ -42,7 +42,7 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Title", name: "title", widget: "string", i18n: false }
       - label: "Socials"
         name: "socials"
         widget: "list"
@@ -62,7 +62,7 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Title", name: "title", widget: "string", i18n: false }
       - { label: "Description", name: "description", widget: "text", i18n: true }
       # SKILLS
       - label: "Skills"
@@ -113,7 +113,7 @@ collections:
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Title", name: "title", widget: "string", i18n: false }
       - { label: "Description", name: "description", widget: "text", i18n: true }
       - { label: "Link", name: "link", widget: "string", i18n: false }
       - { label: "Content", name: "content", widget: "html", i18n: true }
