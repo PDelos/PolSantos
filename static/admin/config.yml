@@ -6,43 +6,127 @@ backend:
 media_folder: "static/uploads/raw"
 public_folder: "/uploads/raw"
 
-format: "json"
-extension: "json"
-
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
-
-display_url: https://localhost:5173
-
 i18n:
-  structure: multiple_files
+  structure: multiple_files 
   locales: [en, es, ca]
   default_locale: en
 
+display_url: https://localhost:5173
+
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "home"
-        label: "Home" 
-        file: "content/pages/home.json"
+  - name: "general"
+    label: "General Information"
+    folder: "content/general"
+    create: true 
+    i18n: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Full Name", name: "full_name", widget: "string", i18n: false }
+      - { label: "Photo", name: "photo", widget: "image", i18n: false }
+      - { label: "Role", name: "role", widget: "string", i18n: true }
+      - { label: "Location", name: "location", widget: "string", i18n: true }
+
+
+
+  - name: "contact"
+    label: "Contact"
+    folder: "content/contact"
+    create: true 
+    i18n: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - label: "Socials"
+        name: "socials"
+        widget: "list"
+        i18n: false
+        fields:
+           - { label: "Icon", name: "icon", widget: "string" }
+           - { label: "URL", name: "url", widget: "string",}
+           - { label: "Display Name", name: "display_name", widget: "string" }
+
+
+  - name: "about"
+    label: "About"
+    folder: "content/about"
+    create: true 
+    i18n: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      # SKILLS
+      - label: "Skills"
+        name: "skills"
+        widget: "list"
         i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Description", name: "description", widget: "text", i18n: true }
-          - { label: "Single Image", name: "image", widget: "image", i18n: false }
+           - { label: "Icon", name: "icon", widget: "string", i18n: false }
+           - { label: "Name", name: "Name", widget: "string", i18n: true }
+           - { label: "Skill Proficiency", name: "proficiency", widget: "number", min: 0, max: 100, i18n: false }
+      
+      # EDUCATION
+      - label: "Education"
+        name: "education"
+        widget: "list"
+        i18n: true
+        fields:
+          - { label: "Icon", name: "icon", widget: "string", i18n: false }
+          - { label: "Organization", name: "organization", widget: "string", i18n: true }
+          - { label: "Degree", name: "degree", widget: "string", i18n: true }
+          - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+          - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
+          - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "Description", name: "description", widget: "html", i18n: true }
+
+      # EXPERIENCE
+      - label: "Work Experience"
+        name: "work_experience"
+        widget: "list"
+        i18n: true
+        fields:
+          - { label: "Icon", name: "icon", widget: "string", i18n: false }
+          - { label: "Company", name: "company", widget: "string", i18n: true }
+          - { label: "Position", name: "position", widget: "string", i18n: true }
+          - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+          - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
+          - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "Description", name: "description", widget: "html", i18n: true }
+
+
 
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
-    create: true
+    create: true 
     i18n: true
+    extension: "json"
+    format: "json"
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      - { label: "Link", name: "link", widget: "string", i18n: false }
+      - { label: "Content", name: "content", widget: "html", i18n: true }
+
+      - label: "Used Technologies"
+        name: "technologies"
+        widget: "list"
+        i18n: false
+        fields:
+           - { label: "Icon", name: "icon", widget: "string" }
+           - { label: "Name", name: "name", widget: "string" }
+
+      # Images
       - { label: "Cover Image", name: "cover", widget: "image", i18n: false }
       - label: "Project Images"
         name: "images"
