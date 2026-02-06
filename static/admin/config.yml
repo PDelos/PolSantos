@@ -17,7 +17,7 @@ collections:
   - name: "general"
     label: "General Information"
     folder: "content/general"
-    create: true 
+    create: false 
     i18n: true
     extension: "json"
     format: "json"
@@ -36,7 +36,7 @@ collections:
   - name: "contact"
     label: "Contact"
     folder: "content/contact"
-    create: true 
+    create: false 
     i18n: false
     extension: "json"
     format: "json"
