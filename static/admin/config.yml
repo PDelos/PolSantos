@@ -11,13 +11,13 @@ i18n:
   locales: [en, es, ca]
   default_locale: en
 
-display_url: https://localhost:5173
+display_url: http://localhost:5173
 
 collections:
   - name: "general"
     label: "General Information"
-    folder: "content/general"
-    create: false 
+    folder: "src/lib/content/general"
+    create: true 
     i18n: true
     extension: "json"
     format: "json"
@@ -25,54 +25,51 @@ collections:
     identifier_field: title
     summary: "{{title}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: false }
-      - { label: "Full Name", name: "full_name", widget: "string", i18n: false }
-      - { label: "Photo", name: "photo", widget: "image", i18n: false }
+      - { label: "Title", name: "title", widget: "string", i18n: duplicate }
+      - { label: "Full Name", name: "full_name", widget: "string", i18n: duplicate }
+      - { label: "Photo", name: "photo", widget: "image", i18n: duplicate }
       - { label: "Role", name: "role", widget: "string", i18n: true }
       - { label: "Location", name: "location", widget: "string", i18n: true }
 
-
-
   - name: "contact"
     label: "Contact"
-    folder: "content/contact"
-    create: false 
-    i18n: false
+    folder: "src/lib/content/contact"
+    create: true 
+    i18n: false # Kept as false since contact info is usually universal
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: false }
+      - { label: "Title", name: "title", widget: "string"}
       - label: "Socials"
         name: "socials"
         widget: "list"
-        i18n: false
         fields:
-           - { label: "Icon", name: "icon", widget: "html" }
-           - { label: "URL", name: "url", widget: "string",}
-           - { label: "Display Name", name: "display_name", widget: "string" }
-
+          - { label: "Platform", name: "platform", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "html" }
+          - { label: "URL", name: "url", widget: "string", pattern: ['^https?://.+', "Must be a valid URL starting with http:// or https://"] }
+          - { label: "Display Name", name: "display_name", widget: "string" }
 
   - name: "about"
     label: "About"
-    folder: "content/about"
+    folder: "src/lib/content/about"
     create: true 
     i18n: true
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: false }
+      - { label: "Title", name: "title", widget: "string", i18n: duplicate }
       - { label: "Description", name: "description", widget: "text", i18n: true }
       # SKILLS
       - label: "Skills"
         name: "skills"
         widget: "list"
-        i18n: false
+        i18n: true
         fields:
-           - { label: "Icon", name: "icon", widget: "html" }
-           - { label: "Name", name: "Name", widget: "string" }
-           - { label: "Skill Proficiency", name: "proficiency", widget: "number", min: 0, max: 100 }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "html" }
+          - { label: "Skill Proficiency", name: "proficiency", widget: "number", min: 0, max: 100 }
       
       # EDUCATION
       - label: "Education"
@@ -81,12 +78,12 @@ collections:
         i18n: true
         fields:
           - { label: "Icon", name: "icon", widget: "html" }
-          - { label: "Organization", name: "organization", widget: "string", i18n: true }
-          - { label: "Degree", name: "degree", widget: "string", i18n: true }
+          - { label: "Organization", name: "organization", widget: "string" }
+          - { label: "Degree", name: "degree", widget: "string" }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
           - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
           - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
-          - { label: "Description", name: "description", widget: "html", i18n: true }
+          - { label: "Description", name: "description", widget: "html" }
 
       # EXPERIENCE
       - label: "Work Experience"
@@ -95,43 +92,41 @@ collections:
         i18n: true
         fields:
           - { label: "Icon", name: "icon", widget: "html" }
-          - { label: "Company", name: "company", widget: "string", i18n: true }
-          - { label: "Position", name: "position", widget: "string", i18n: true }
+          - { label: "Company", name: "company", widget: "string" }
+          - { label: "Position", name: "position", widget: "string" }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
           - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
           - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
-          - { label: "Description", name: "description", widget: "html", i18n: true }
-
-
+          - { label: "Description", name: "description", widget: "html" }
 
   - name: "projects"
     label: "Projects"
-    folder: "content/projects"
+    folder: "src/lib/content/projects"
     create: true 
     i18n: true
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", i18n: false }
+      - { label: "Title", name: "title", widget: "string", i18n: duplicate }
       - { label: "Description", name: "description", widget: "text", i18n: true }
-      - { label: "Link", name: "link", widget: "string", i18n: false }
+      - { label: "Link", name: "link", widget: "string", i18n: duplicate, pattern: ['^https?://.+', "Must be a valid URL starting with http:// or https://"] }
       - { label: "Content", name: "content", widget: "html", i18n: true }
 
       - label: "Used Technologies"
         name: "technologies"
         widget: "list"
-        i18n: false
+        i18n: true
         fields:
            - { label: "Icon", name: "icon", widget: "html" }
            - { label: "Name", name: "name", widget: "string" }
 
       # Images
-      - { label: "Cover Image", name: "cover", widget: "image", i18n: false }
+      - { label: "Cover Image", name: "cover", widget: "image", i18n: duplicate }
       - label: "Project Images"
         name: "images"
         widget: "list"
         i18n: true
         fields:
-           - { label: "Image", name: "image", widget: "image", i18n: false }
-           - { label: "Caption", name: "caption", widget: "string", i18n: true }
+           - { label: "Image", name: "image", widget: "image" }
+           - { label: "Caption", name: "caption", widget: "string" }
