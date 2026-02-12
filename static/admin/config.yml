@@ -17,7 +17,7 @@ collections:
   - name: "general"
     label: "General Information"
     folder: "src/lib/content/general"
-    create: true 
+    create: false 
     i18n: true
     extension: "json"
     format: "json"
@@ -34,7 +34,7 @@ collections:
   - name: "contact"
     label: "Contact"
     folder: "src/lib/content/contact"
-    create: true 
+    create: false 
     i18n: false # Kept as false since contact info is usually universal
     extension: "json"
     format: "json"
@@ -53,7 +53,7 @@ collections:
   - name: "about"
     label: "About"
     folder: "src/lib/content/about"
-    create: true 
+    create: false 
     i18n: true
     extension: "json"
     format: "json"
