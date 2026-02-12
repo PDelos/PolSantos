@@ -1,6 +1,73 @@
 {
-  "education": [],
-  "work_experience": [],
+  "education": [
+    {
+      "is_current": false,
+      "icon": "/uploads/raw/ins_jvv.png",
+      "organization": "INS Jaume Vicens Vives",
+      "degree": "Spanish Scientific Baccalaureate",
+      "location": "Girona, Spain",
+      "from": "2020-09-01",
+      "end": "2022-06-01",
+      "description": "<style>\n  .label {\n    font-weight: 600;\n  }\n</style>\n\n\n<p><span class=\"label\">Grade:</span> 13.167/14</p>\n  <p>\n    Science-focused program with emphasis on mathematics, physics, chemistry, and biology.\n  </p>"
+    },
+    {
+      "is_current": false,
+      "icon": "/uploads/raw/ins_jvv.png",
+      "description": "<style>\n  .label {\n    font-weight: 600;\n  }\n</style>\n  \n\n<p><span class=\"label\">Grade:</span> 41/45</p>\n  <p>\n    Completed concurrently with the Spanish Scientific Baccalaureate in a rigorous\n    science and mathematics track.\n  </p>",
+      "end": "2022-06-01",
+      "from": "2022-09-01",
+      "organization": "INS Jaume Vicens Vives",
+      "degree": "International Baccalaureate ",
+      "location": "Girona, Spain"
+    },
+    {
+      "is_current": true,
+      "icon": "/uploads/raw/upc-positiu-p3005.png",
+      "organization": "CFIS - Polytechnic University of Catalonia",
+      "degree": "B.Sc. in Data Science and Engineering",
+      "location": "Barcelona, Spain",
+      "from": "2026-02-22",
+      "description": "<style>\n  .label {\n    font-weight: 600;\n  }\n</style>\n\n  <p><span class=\"label\">Scholarship:</span> Merit-based scholarship recipient</p>\n  <p>\n    Undergraduate program focused on machine learning, statistics, optimization,\n    and large-scale data systems.\n  </p>"
+    },
+    {
+      "is_current": true,
+      "icon": "/uploads/raw/upc-positiu-p3005.png",
+      "degree": "B.Sc. in Biomedical Engineering",
+      "organization": "CFIS - Polytechnic University of Catalonia",
+      "location": "Barcelona, Spain",
+      "from": "2022-09-12",
+      "description": "<p>\n    Pursuing this second bachelor’s degree through CFIS, a highly selective\n    program that enables high-achieving students to complete two UPC degrees\n    in parallel through an accelerated academic track.\n  </p>"
+    }
+  ],
+  "work_experience": [
+    {
+      "is_current": false,
+      "company": "Science4Tech",
+      "position": "Data Scientist",
+      "from": "2023-07-01",
+      "end": "2024-04-01",
+      "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Ensured correct execution of Mixture of Experts (MoE) models on company-designed chips.</li>\n    <li>Optimized performance through quantization and sparse execution; conducted statistical analysis of gating mechanisms.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Python · C++ · Artificial Intelligence · Machine Learning\n  </p>\n</div>\n",
+      "icon": "s4t"
+    },
+    {
+      "is_current": false,
+      "company": "Esperanto Technologies",
+      "position": "Data Engineer",
+      "from": "2024-06-01",
+      "end": "2024-09-01",
+      "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Ensured correct execution of Mixture of Experts (MoE) models on company-designed chips.</li>\n    <li>Optimized performance via quantization and sparse execution; performed statistical analysis on gating.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Python · C++ · Artificial Intelligence · Machine Learning\n  </p>\n</div>\n",
+      "icon": "esperanto"
+    },
+    {
+      "is_current": false,
+      "icon": "google",
+      "company": "Google",
+      "position": "Associate Software Engineer",
+      "from": "2025-06-30",
+      "end": "2025-09-19",
+      "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Developed an AI system to translate natural language into SQL queries with reduced errors and hallucinations.</li>\n    <li>Implemented Retrieval-Augmented Generation (RAG) methods and validation mechanisms to align user intent with database structures.</li>\n    <li>Enabled users to query data naturally without prior schema knowledge.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Artificial Intelligence · Python · SQL\n  </p>\n</div>\n"
+    }
+  ],
   "title": "about_info",
   "description": "I’m a Barcelona-based Data Scientist and Software Developer and a double degree student in Data Science and Biomedical Engineering (CFIS-UPC). I build data-driven and web solutions using Python, Docker, and modern web stacks, with a strong background in competitive programming and international informatics competitions, and I’m currently focused on MLOps and cloud infrastructure.",
   "skills": [
