@@ -77,9 +77,10 @@ collections:
         widget: "list"
         i18n: true
         fields:
-          - { label: "Icon", name: "icon", widget: "html" }
+          - { label: "Icon", name: "icon", widget: "image" }
           - { label: "Organization", name: "organization", widget: "string" }
           - { label: "Degree", name: "degree", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
           - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
           - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
@@ -91,9 +92,10 @@ collections:
         widget: "list"
         i18n: true
         fields:
-          - { label: "Icon", name: "icon", widget: "html" }
+          - { label: "Icon", name: "icon", widget: "image" }
           - { label: "Company", name: "company", widget: "string" }
           - { label: "Position", name: "position", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
           - { label: "From", name: "from", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
           - { label: "Currently Ongoing?", name: "is_current", widget: "boolean", default: false }
           - { label: "End Date", name: "end", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: false }
