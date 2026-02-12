@@ -47,7 +47,8 @@
       "from": "2023-07-01",
       "end": "2024-04-01",
       "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Ensured correct execution of Mixture of Experts (MoE) models on company-designed chips.</li>\n    <li>Optimized performance through quantization and sparse execution; conducted statistical analysis of gating mechanisms.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Python · C++ · Artificial Intelligence · Machine Learning\n  </p>\n</div>\n",
-      "icon": "s4t"
+      "icon": "s4t",
+      "location": "Barcelona, Spain"
     },
     {
       "is_current": false,
@@ -56,7 +57,8 @@
       "from": "2024-06-01",
       "end": "2024-09-01",
       "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Ensured correct execution of Mixture of Experts (MoE) models on company-designed chips.</li>\n    <li>Optimized performance via quantization and sparse execution; performed statistical analysis on gating.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Python · C++ · Artificial Intelligence · Machine Learning\n  </p>\n</div>\n",
-      "icon": "esperanto"
+      "icon": "esperanto",
+      "location": "Barcelona, Spain"
     },
     {
       "is_current": false,
@@ -65,7 +67,8 @@
       "position": "Associate Software Engineer",
       "from": "2025-06-30",
       "end": "2025-09-19",
-      "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Developed an AI system to translate natural language into SQL queries with reduced errors and hallucinations.</li>\n    <li>Implemented Retrieval-Augmented Generation (RAG) methods and validation mechanisms to align user intent with database structures.</li>\n    <li>Enabled users to query data naturally without prior schema knowledge.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Artificial Intelligence · Python · SQL\n  </p>\n</div>\n"
+      "description": "<style>\n  .skills {\n    font-style: italic;\n  }\n  .experience-entry ul {\n    list-style-type: disc;\n    margin-left: 20px;\n  }\n</style>\n\n<div class=\"experience-entry\">\n  <ul>\n    <li>Developed an AI system to translate natural language into SQL queries with reduced errors and hallucinations.</li>\n    <li>Implemented Retrieval-Augmented Generation (RAG) methods and validation mechanisms to align user intent with database structures.</li>\n    <li>Enabled users to query data naturally without prior schema knowledge.</li>\n  </ul>\n\n  <p class=\"skills\">\n    Skills: Artificial Intelligence · Python · SQL\n  </p>\n</div>\n",
+      "location": "Zurich, Switzerland"
     }
   ],
   "title": "about_info",
